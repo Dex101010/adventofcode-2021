@@ -1,3 +1,2 @@
-with open("input.txt","r") as r:
-    mylist=[int(x.rstrip("\n")) for x in r.readlines()]  
-    print(sum([mylist[i+1]>mylist[i] for i in range(len(mylist[:-1]))]))
+x=open("input.txt","r").readlines()
+print(sum([int(k)<int(v) for k,v in zip(x,x[1:])]))
