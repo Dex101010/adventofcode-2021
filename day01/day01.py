@@ -1,5 +1,3 @@
-a=lambda b:sum([k<v for k,v in zip(b,b[1:])])
-# a=lambda b:sum(map(lambda c,d:c<d,*[b[:-1],b[1:]]))
+a=lambda b,c:sum([k<v for k,v in zip(b,b[c:])])
 x=list(map(int,open("input.txt").readlines()))
-z=list(map(sum,zip(x,x[1:],x[2:])))
-print(a(x),a(z))
+print(a(x,1),a(x,3))
