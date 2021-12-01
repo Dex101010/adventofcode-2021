@@ -1,2 +1,3 @@
 with open("input.txt","r") as r:
-    print(sum([mylist[i+1]>mylist[i] for i,v in enumerate(r.readlines()[:-1])]))
+    mylist=[int(x.rstrip("\n")) for x in r.readlines()]  
+    print(sum([mylist[i+1]>mylist[i] for i in range(len(mylist[:-1]))]))
